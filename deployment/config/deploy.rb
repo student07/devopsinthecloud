@@ -6,6 +6,9 @@ sdb = AWS::SimpleDB.new
 
 set :domain do
   item = sdb.domains["test"].items["parameters"]
+
+
+
   item.attributes["domain"].values[0].to_s
 end
 
